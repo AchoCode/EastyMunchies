@@ -1,5 +1,11 @@
+import { HomePg } from "./Components/HomePg";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <HomePg />
+    </>
+  );
 }
 
 export default App;
