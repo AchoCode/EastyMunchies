@@ -5,8 +5,9 @@
   --primary-color-hover: #b49724;
   --secondary-color-hover: #175216;
   --secondary-font: Sofadi One;
+  --span-color: #05cf37;
   --outline: 2px solid red;
-  --overlay: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.8));
+  --overlay: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.9));
   font-family: SUSE;
 }
 body {
@@ -20,6 +21,25 @@ body {
   align-items: center;
 }
 
+.box {
+  height: 1500px;
+}
+/* -------------- BUTTON COMPONENT -------------- */
+.btn {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.btn-container {
+  padding: 5px 30px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  transition: 0.3s;
+}
+.btn-container:hover {
+  background-color: var(--secondary-color-hover);
+  scale: 1.03;
+}
 /* -------------- NAVIGATION BAR COMPONENT -------------- */
 .nav-bar {
   display: flex;
@@ -33,6 +53,19 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid white;
   border-radius: 5px;
+  transition: 1s;
+}
+.nav-bar.fixed {
+  background-color: #150b05;
+  position: fixed;
+  top: 0;
+  border-top: none;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  z-index: 2;
+}
+.nav-bar.fixed::after {
+  display: none;
 }
 .nav-bar::after {
   content: "";
@@ -57,7 +90,7 @@ body {
 .nav-links::after {
   content: "";
   display: block;
-  background-color: var(--primary-color-hover);
+  background-color: var(--span-color);
   height: 2px;
   width: 0%;
   margin: auto;
@@ -72,7 +105,7 @@ body {
   transition: 0.3s;
 }
 .nav-links a:hover {
-  color: var(--primary-color-hover);
+  color: var(--span-color);
 }
 .nav-links:hover::after {
   width: 100%;
@@ -92,4 +125,51 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.hero-text-container {
+  font-family: var(--secondary-font);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.hero-text-container span {
+  color: var(--span-color);
+}
+.hero-text-1 {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+.hero-text-1 h2 {
+  text-align: center;
+  font-size: 1.7rem;
+}
+.hero-text-1::before {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 40px;
+  background-color: var(--primary-color);
+  border-radius: 10px;
+}
+
+.hero-welcome-text h1 {
+  font-size: 6rem;
+  text-align: center;
+  margin: 0;
+}
+.hero-welcome-text h2 {
+  font-size: 4rem;
+  margin: 0;
+  text-align: center;
+}
+.hero-welcome-text h3 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 30px;
 }
