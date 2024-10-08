@@ -1,7 +1,8 @@
 import React from "react";
 import { NavBar } from "../NavBar";
 import { Button } from "../Button";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import AboutUsImg from "../../assets/Static/about-us-pg-img.jpg";
 
 export const HomePg = () => {
   const buttonVariants = {
@@ -56,7 +57,34 @@ export const HomePg = () => {
           <Button link="/menu" title="Browse Menu" />
         </motion.div>
       </div>
-      <div className="box"></div>
+      <div className="about-us-section">
+        <img src={AboutUsImg} alt="image.png" />
+        <div className="about-us-text">
+          <div className="text">
+            <div className="heading">
+              <h2>Our Story</h2>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae quaerat voluptates veniam mollitia quidem sint ad neque,
+              pariatur similique libero enim eaque consequatur sit ipsa,
+              possimus ex nulla fugit modi.
+            </p>
+          </div>
+          <div className="text">
+            <div className="heading">
+              <h2>Our Mission</h2>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Molestiae quaerat voluptates veniam mollitia quidem sint ad neque,
+              pariatur similique libero enim eaque consequatur sit ipsa,
+              possimus ex nulla fugit modi.
+            </p>
+          </div>
+          <Button link='/about-us' title='Learn more'/>
+        </div>
+      </div>
     </div>
   );
 };
