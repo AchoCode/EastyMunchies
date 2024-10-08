@@ -5,10 +5,12 @@
   --primary-color-hover: #b49724;
   --secondary-color-hover: #175216;
   --tetiary-color: #150b05;
+  --tetiary-color-2: #e19461;
   --secondary-font: Sofadi One;
   --span-color: #05cf37;
   --outline: 2px solid red;
   --overlay: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.9));
+  --img-overlay: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5));
   font-family: SUSE;
 }
 body {
@@ -185,6 +187,19 @@ body {
   height: 400px;
   border-radius: 10px;
 }
+#image-container {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+}
+.overlay {
+  position: absolute;
+  height: 400px;
+  border-radius: 10px;
+  width: 100%;
+  background-image: var(--img-overlay);
+  z-index: 1;
+}
 .about-us-text {
   height: 100%;
 }
@@ -199,15 +214,14 @@ body {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  
 }
 .text .heading::before,
 .text .heading::after {
   content: "";
   display: block;
-  height: 5px;
+  height: 4px;
   width: 40px;
-  background-color: var(--tetiary-color);
+  background-color: var(--tetiary-color-2);
   border-radius: 10px;
 }
 .text .heading h2 {
@@ -218,8 +232,50 @@ body {
   text-align: center;
   font-size: 1.3rem;
   font-weight: 500;
-  margin:5px;
+  margin: 5px;
 }
-.about-us-section .btn-container{
+.about-us-section .btn-container {
   margin: 30px auto;
+}
+
+/* ------- MENU SECTION - COMPONENT ------- */
+.menu-section {
+  height: 605px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  background-image: var(--overlay), url("assets/Static/hero-bg.jpg");
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, minmax(200px, 400px));
+  color: white;
+  padding: 20px;
+}
+.menu-card-body {
+  height: 120px;
+  width: 350px;
+  border: 2px solid var(--tetiary-color-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  column-gap: 5px;
+  border-radius: 10px;
+  overflow: hidden;
+  font-family: var(--secondary-font);
+}
+.menu-card-body img {
+  height: 120px;
+  width: 185px;
+}
+.product-details {
+  width: 100%;
+}
+.product-details h3 {
+  font-weight: normal;
+  font-size: 1.3rem;
+  text-align: center;
 }
