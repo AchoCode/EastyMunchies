@@ -247,10 +247,16 @@ body {
   background-attachment: fixed;
   width: 100vw;
   background-image: var(--overlay), url("assets/Static/hero-bg.jpg");
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.menu-items-grid {
   display: grid;
   place-items: center;
   grid-template-columns: repeat(3, minmax(200px, 400px));
-  color: white;
+  gap: 20px;
   padding: 20px;
 }
 .menu-card-body {

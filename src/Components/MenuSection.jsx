@@ -7,7 +7,8 @@ import friedChicken from "../assets/Static/fried-chicken.jpg";
 import friedRice from "../assets/Static/fried-rice.jpg";
 import popcorn from "../assets/Static/popcorn.jpg";
 import sharwama from "../assets/Static/sharwama.jpg";
-
+import localDishes from "../assets/Static/local-dishes.jpg";
+import { Button } from "./Button";
 export const MenuSection = () => {
   const menuItems = [
     {
@@ -40,7 +41,7 @@ export const MenuSection = () => {
     },
     {
       name: "Local dishes",
-      image: null,
+      image: localDishes,
     },
     {
       name: "And many more....",
@@ -50,9 +51,15 @@ export const MenuSection = () => {
 
   return (
     <div className="menu-section">
-      {menuItems.map((item, key) => (
-        <MenuCard key={key} name={item.name} image={item.image} />
-      ))}
+        <div className="heading">
+            <h2>Easty Menu</h2>
+        </div>
+      <div className="menu-items-grid">
+        {menuItems.map((item, key) => (
+          <MenuCard key={key} name={item.name} image={item.image} />
+        ))}
+      </div>
+      <Button link="/menu" title="Explore Menu" />
     </div>
   );
 };
