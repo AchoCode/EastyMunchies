@@ -4,7 +4,11 @@ import { Button } from "../Button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import AboutUsImg from "../../assets/Static/about-us-pg-img.jpg";
+import chefSvg from "../../assets/Static/chef.svg";
+import deliverySvg from "../../assets/Static/delivery.svg";
+import menuSvg from "../../assets/Static/menu.svg";
 import { MenuSection } from "../MenuSection";
+import { Counter } from "../Counter";
 
 export const HomePg = () => {
   const buttonVariants = {
@@ -33,7 +37,23 @@ export const HomePg = () => {
     triggerOnce: false, //triggers everytime the element is in viewport
     threshold: 0.5, //triggers when 50% of the elemen is in the viewport
   });
-
+  const countItems = [
+    {
+      targerCount: 200,
+      countText: "VISITORS DAILY",
+      percent: false,
+    },
+    {
+      targerCount: 400,
+      countText: "DELIVERY MONTHLY",
+      percent: false,
+    },
+    {
+      targerCount: 100,
+      countText: "POSITIVE FEEDBACK",
+      percent: true,
+    },
+  ];
   return (
     <div className="page-container">
       <NavBar />
@@ -134,6 +154,51 @@ export const HomePg = () => {
 
       {/* MENU SECTION/COMPONENT */}
       <MenuSection />
+
+      {/* OUR FEATURES SECTION */}
+      <div className="features-section">
+        <h1 className="feature-text">Why people choose us?</h1>
+        <div className="features-container">
+          <div className="feature">
+            <img src={deliverySvg} alt="svg-icon" />
+            <h3>Fast Delivery</h3>
+            <p>
+              Get your meals delivered to your doorstep quickly with our
+              efficient and reliable delivery service.
+            </p>
+          </div>
+          <div className="feature">
+            <img src={chefSvg} alt="svg-icon" />
+            <h3>Expert Chefs</h3>
+            <p>
+              Our skilled chefs prepare fresh, high-quality meals with attention
+              to every detail.
+            </p>
+          </div>
+          <div className="feature">
+            <img src={menuSvg} alt="svg-icon" />
+            <h3>Customizable Menu</h3>
+            <p>
+              Choose from a wide range of dishes and customize your order to
+              suit your taste and dietary preferences.
+            </p>
+          </div>
+        </div>
+
+        <hr/>
+
+        {/* COUNTER COMPONENT - SECTION */}
+        <div className="count-wrapper">
+          {countItems.map((countItem, key) => (
+            <Counter
+              key={key}
+              targetCount={countItem.targerCount}
+              countText={countItem.countText}
+              percent={countItem.percent}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
