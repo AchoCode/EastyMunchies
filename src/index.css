@@ -44,12 +44,38 @@ body {
   color: var(--secondary-color);
 }
 hr {
-  width: 100%; 
+  width: 100%;
   height: 2px;
   border: none;
   border-top: 2px dashed var(--tetiary-color);
   margin-top: 50px;
 }
+
+/* -------------- CAROUSEL COMPONENT --------------*/
+.carousel-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.review-card{
+  border: var(--outline);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: palevioletred;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10px;
+}
+
+.review-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+
 /* -------------- COUNTER COMPONENT - SECTION ------------- */
 .counter {
   display: flex;
@@ -59,7 +85,6 @@ hr {
   font-size: 1.5rem;
   font-weight: 600;
   font-family: var(--secondary-font);
-
 }
 .counter div {
   display: flex;
@@ -72,7 +97,7 @@ hr {
 }
 .counter div svg {
   font-size: 2rem;
-  color: var(--secondary-color)
+  color: var(--secondary-color);
 }
 .count-wrapper {
   display: flex;

@@ -10,7 +10,7 @@ export const Counter = ({ targetCount, percent, countText }) => {
   useEffect(() => {
     let interval;
     if (inView && count < targetCount) {
-      let intervalSpeed = (5.5 / targetCount) * 1000;
+      let intervalSpeed = (4.7 / targetCount) * 1000;
       interval = setInterval(() => {
         setCount((prevCount) => prevCount + 1);
       }, intervalSpeed);
@@ -23,13 +23,12 @@ export const Counter = ({ targetCount, percent, countText }) => {
     <div ref={ref} className="counter">
       {percent ? (
         <div>
-
           {count}
           <FaPercent />
         </div>
       ) : (
         <div>
-          {count} <FaPlus /> 
+          {count} <FaPlus />
         </div>
       )}
       {countText}

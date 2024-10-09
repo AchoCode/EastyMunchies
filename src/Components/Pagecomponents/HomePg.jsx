@@ -9,6 +9,7 @@ import deliverySvg from "../../assets/Static/delivery.svg";
 import menuSvg from "../../assets/Static/menu.svg";
 import { MenuSection } from "../MenuSection";
 import { Counter } from "../Counter";
+import { Carousel } from "../Carousel";
 
 export const HomePg = () => {
   const buttonVariants = {
@@ -185,7 +186,7 @@ export const HomePg = () => {
           </div>
         </div>
 
-        <hr/>
+        <hr />
 
         {/* COUNTER COMPONENT - SECTION */}
         <div className="count-wrapper">
@@ -198,6 +199,12 @@ export const HomePg = () => {
             />
           ))}
         </div>
+
+        {/* TESTIMONIALS SECTION - COMPONENT */}
+        <div className="testimonials">
+          <div className="feature-text">Our customers say...</div>
+        </div>
+          <Carousel />
       </div>
     </div>
   );
