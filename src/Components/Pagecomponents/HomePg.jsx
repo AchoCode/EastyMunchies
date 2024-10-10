@@ -201,10 +201,10 @@ export const HomePg = () => {
         </div>
 
         {/* TESTIMONIALS SECTION - COMPONENT */}
-        <div className="testimonials">
+        <div className="testimonials  carousel-wrapper">
           <div className="feature-text">Our customers say...</div>
-        </div>
           <Carousel />
+        </div>
       </div>
     </div>
   );

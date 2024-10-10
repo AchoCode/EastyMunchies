@@ -1,7 +1,13 @@
-import React from 'react'
-import {} from 'react-icons/fa6'
+import React from "react";
+import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 export const Ratings = () => {
   return (
-    <div>Ratings</div>
-  )
-}
+    <div className="ratings">
+      <FaStar />
+      <FaStar />
+      <FaStar />
+      <FaStar />
+      <FaStarHalfAlt />
+    </div>
+  );
+};
