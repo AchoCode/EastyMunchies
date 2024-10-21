@@ -53,10 +53,14 @@ hr {
 
 /* -------------- CAROUSEL COMPONENT --------------*/
 .carousel-wrapper {
-  width: 90%;
-  margin: 0 auto;
+  width: 100vw;
+  background-color: var(--secondary-color-hover);
+  padding: 0 0px 60px;
 }
-
+.carousel-wrapper li button::before {
+  background-color: whitesmoke;
+  margin-top: 20px;
+}
 .review-card {
   border-radius: 10px;
   width: 310px;
@@ -64,6 +68,7 @@ hr {
   flex-direction: column;
   align-items: center;
   padding: 0px 20px;
+  color: white;
 }
 
 .review-card img {
@@ -72,8 +77,8 @@ hr {
   border-radius: 50%;
 }
 .review-card p {
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 1.05rem;
   text-align: center;
 }
 .review-text {
@@ -85,8 +90,22 @@ hr {
   position: absolute;
 }
 .review-text .right {
-  right: 0;
-  bottom: 10px;
+  right: 5px;
+  bottom: -5px;
+}
+.review-text .left {
+  top: -5px;
+}
+.carousel-wrapper .feature-text {
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+.carousel-wrapper svg {
+  color: gold;
+}
+.ratings svg {
+  color: gold;
 }
 /* -------------- COUNTER COMPONENT - SECTION ------------- */
 .counter {
@@ -212,7 +231,8 @@ hr {
 /*-------------- HOMEPAGE COMPONENT --------------*/
 .hero-section {
   height: 600px;
-  background-image: var(--overlay), url("assets/Static/hero-bg.jpg");
+  /* background-image: var(--overlay), url("assets/Static/hero-bg.jpg"); */
+  background-image: var(--overlay), url("assets/Static/bg2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

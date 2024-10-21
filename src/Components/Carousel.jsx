@@ -16,6 +16,9 @@ export const Carousel = () => {
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true, // Corrected spelling
+    autoplaySpeed: 3000, // Change speed in milliseconds (3 seconds)
+    pauseOnHover: true,  //
   };
   const userReviews = [
     {
@@ -51,7 +54,10 @@ export const Carousel = () => {
   ];
 
   return (
-    <div>
+    <div style={{
+      width: '85%',
+      marginLeft: 110,
+    }}>
       <Slider {...settings}>
         {userReviews.map((review, key) => (
           <ReviewCard
