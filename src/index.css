@@ -18,6 +18,7 @@ body {
   padding: 0 20px;
   overflow-x: hidden;
 }
+
 .page-container {
   position: relative;
   display: flex;
@@ -58,9 +59,10 @@ hr {
   padding: 0 0px 60px;
 }
 .carousel-wrapper li button::before {
-  background-color: whitesmoke;
+  color: whitesmoke;
   margin-top: 20px;
 }
+
 .review-card {
   border-radius: 10px;
   width: 310px;
@@ -227,7 +229,73 @@ hr {
 .nav-links:hover::after {
   width: 100%;
 }
+/* --------------- FOOTER COMPONENT- SEECTION ---------------*/
+.footer-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-image: var(--overlay),
+  url('assets/Static/hero-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  padding: 10px 40px;
+}
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-links h3 {
+  font-family: var(--secondary-font);
+  font-size: 1.8rem;
+  margin: 0;
+}
+.social-links li {
+  display: inline-block;
+  padding: 2px 10px;
+  transition: 0.3s;
+}
+.social-links a {
+  color: white;
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+.social-links a:hover{
+  color: #ffcd00;
+}
+.social-links li:hover{
+  transform: scale(1.1);
+}
+.info-grid {
+  display: flex;
+  gap: 50px;
+}
+.footer-area .grid {
+  width: 350px;
+}
+.footer-area .grid h3 {
+  font-size: 1.3rem;
+}
+.footer-area .grid p{
+  font-size: 1.19rem;
+  font-weight: 500;
+}
+.footer-area hr {
+  border-top: 2px dashed var(--tetiary-color-2);
+  margin-top: 0px;
 
+}
+.footer-area .Contact-info ul{
+  padding-left: 0;
+}
+.footer-area .Contact-info li{
+  list-style: none;
+}
 /*-------------- HOMEPAGE COMPONENT --------------*/
 .hero-section {
   height: 600px;
@@ -438,4 +506,56 @@ hr {
   margin-top: 0;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+/* --------------- DISPATCH RIDER SECTION --------------- */
+.dispatch-sign-up {
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  position: relative;
+}
+.dispatch-image img {
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px;
+}
+.ball {
+  height: 70px;
+  width: 70px;
+  background-color: #026e01;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+.ball:nth-child(3) {
+  background-color: var(--tetiary-color);
+  right: 190px;
+  height: 60px;
+  width: 60px;
+  bottom: 50px;
+}
+.ball:nth-child(4) {
+  background-color: var(--tetiary-color-2);
+  right: 140px;
+  bottom: 25px;
+  height: 50px;
+  width: 50px;
+}
+.ball:nth-child(5) {
+  right: 120px;
+  bottom: 80px;
+}
+.dispatch-text h1 {
+  color: var(--secondary-color-hover);
+}
+.dispatch-text p {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.dispatch-text .btn-container {
+  border-radius: 5px;
+  box-shadow: 5px 3px 5px 1px;
 }

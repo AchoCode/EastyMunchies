@@ -3,13 +3,14 @@ import { NavBar } from "../NavBar";
 import { Button } from "../Button";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { MenuSection } from "../MenuSection";
+import { Counter } from "../Counter";
+import { Carousel } from "../Carousel";
 import AboutUsImg from "../../assets/Static/about-us-pg-img.jpg";
 import chefSvg from "../../assets/Static/chef.svg";
 import deliverySvg from "../../assets/Static/delivery.svg";
 import menuSvg from "../../assets/Static/menu.svg";
-import { MenuSection } from "../MenuSection";
-import { Counter } from "../Counter";
-import { Carousel } from "../Carousel";
+import RiderImage from "../../assets/Static/rider1.jpg";
 
 export const HomePg = () => {
   const buttonVariants = {
@@ -45,7 +46,7 @@ export const HomePg = () => {
       percent: false,
     },
     {
-      targerCount: 400,
+      targerCount: 350,
       countText: "DELIVERY MONTHLY",
       percent: false,
     },
@@ -57,6 +58,8 @@ export const HomePg = () => {
   ];
   return (
     <div className="page-container">
+      
+      {/* NAVIGATION COMPONENT */}
       <NavBar />
 
       <div className="hero-section">
@@ -199,13 +202,41 @@ export const HomePg = () => {
             />
           ))}
         </div>
-
-        {/* TESTIMONIALS SECTION - COMPONENT */}
-        <div className="testimonials  carousel-wrapper">
-          <div className="feature-text">Our customers say...</div>
-          <Carousel />
-        </div>
       </div>
+
+      {/* TESTIMONIALS SECTION - COMPONENT */}
+      <div className="testimonials  carousel-wrapper">
+        <div className="feature-text">Our customers say...</div>
+        <Carousel />
+      </div>
+
+      <div className="dispatch-sign-up">
+        <div className="dispatch-image">
+          <img src={RiderImage} alt="rider.jpg" />
+        </div>
+        <div className="dispatch-text">
+          <h1>Become a dispatch rider</h1>
+          <p>
+            Looking for a flexible way to earn? Join our team of dedicated food
+            delivery riders! Enjoy competitive pay, flexible hours, and the
+            freedom to work on your terms. Start delivering with us today!
+          </p>
+          <Button link="/dispatch-sign-up" title="Register" />
+        </div>
+        <div className="ball"></div>
+        <div className="ball"></div>
+        <div className="ball"></div>
+      </div>
+
+
+
+
+
+
+
+
+
+
     </div>
   );
 };
