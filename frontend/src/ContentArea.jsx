@@ -1,10 +1,10 @@
 import React from "react";
-import { HomePg } from "./Components/Pagecomponents/HomePg";
-import { AboutUsPg } from "./Components/Pagecomponents/AboutUsPg";
-import { MenuPg } from "./Components/Pagecomponents/MenuPg";
-import { ContactUsPg } from "./Components/Pagecomponents/ContactUsPg";
-import { CartPg } from "./Components/Pagecomponents/CartPg";
-import { Url404 } from "./Components/Pagecomponents/Url404";
+import { HomePg } from "./Components/Pages/HomePg";
+import { AboutUsPg } from "./Components/Pages/AboutUsPg";
+import { MenuPg } from "./Components/Pages/MenuPg";
+import { ContactUsPg } from "./Components/Pages/ContactUsPg";
+import { CartPg } from "./Components/Pages/CartPg";
+import { Url404 } from "./Components/Pages/Url404";
 import { Routes, Route } from "react-router-dom";
 export const ContentArea = () => {
   return (

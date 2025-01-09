@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logos/navLogobl.png";
+import logo from "../../assets/logos/logo.png";
 import { Link } from "react-router-dom";
 export const NavBar = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -20,23 +20,23 @@ export const NavBar = () => {
   }, []);
   return (
     <>
-      <div className={`nav-bar ${isFixed ? `fixed` : ``}`}>
+      <div className={`navbar-container ${isFixed ? `fixed` : ``}`}>
         <img src={logo} className="logo" alt="logo.png" />
 
         <ul>
-          <li className="nav-links">
+          <li className="navlinks">
             <Link to="/">Home</Link>
           </li>
-          <li className="nav-links">
+          <li className="navlinks">
             <Link to="/Menu">Menu</Link>
           </li>
-          <li className="nav-links">
+          <li className="navlinks">
             <Link to="/Cart">Cart</Link>
           </li>
-          <li className="nav-links">
+          <li className="navlinks">
             <Link to="/About-us">About us</Link>
           </li>
-          <li className="nav-links">
+          <li className="navlinks">
             <Link to="/Contact-us">Contact us</Link>
           </li>
         </ul>

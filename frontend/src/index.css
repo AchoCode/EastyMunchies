@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Sofadi+One&display=swap");
+:root {
+  --primary-color: rgb(255, 110, 97);
+  --secondary-color: white;
+  --primary-color-hover: rgb(222, 70, 56);
+  --secondary-color-hover: #eaeaea;
+  --tetiary-color: #150b05;
+  --secondary-font: Sofadi One;
+  --outline: 2px solid red;
+  --overlay: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.9));
+  --img-overlay: linear-gradient(rgb(0, 0, 0, 0.45), rgb(0, 0, 0, 0.45));
+  font-family: SUSE;
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/** ====== BUTTON COMPONENT BASE STYLE ===== **/
+.btn-container {
+  max-width: fit-content;
+  padding: 7px 5px 7px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: var(--primary-color);
+  gap: 15px;
+  transition: 0.3s;
+}
+.btn-container:hover {
+  background-color: var(--primary-color-hover);
+}
+.btn-container svg {
+  font-size: 1.8rem;
+  transform: rotate(30deg);
+  color: white;
+}
+.btn-container .btn {
+  font-size: 1.3rem;
+}
+.btn {
+  color: white;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/** ======= NAVBAR COMPONENT ======== **/
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  padding: 5px 10px;
+}
+.navbar-container ul {
+  padding-left: 0;
+}
+.navlinks {
+  display: inline-block;
+  background: transparent;
+  margin: 2px 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+.navlinks:hover {
+  background: var(--primary-color);
+}
+.navlinks a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+.navlinks:hover a {
+  color: white;
+
+}
+.logo {
+  height: 50px;
+}
+
+/** ======= HOME PAGE COMPONENT ======== **/
+.hero-section {
+  background: var(--secondary-color-hover);
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 90px 0 0;
+}
+.hero-textbox::before {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: var(--primary-color);
+  opacity: 0.15;
+  border-radius: 50%;
+  top: 210px;
+  left: 40px;
+}
+.hero-textbox::after {
+  display: block;
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background-color: var(--primary-color);
+  opacity: 0.5;
+  border-radius: 50%;
+  top: 170px;
+  right: 50%;
+  z-index: -1;
+  filter: blur(50px);
+}
+.hero-textbox {
+  width: 47%;
+  padding: 2px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  isolation: isolate;
+}
+.hero-textbox p {
+  font-size: 1.2rem;
+}
+.imagebox {
+  background-image: var(--img-overlay), url("assets/Static/heroimg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 600px;
+  border-radius: 20px;
+  position: relative;
+}
+.imagebox .content {
+  background-color: rgba(255, 255, 255, 0.214);
+  backdrop-filter: blur(2px);
+  color: white;
+  width: 300px;
+  height: fit-content;
+  border: 2px solid rgba(255, 255, 255, 0.194);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px;
+}
+.imagebox .text h3, .text p {
+  margin: 5px 0;
+}
+.imagebox .btn-container{
+  padding: 5px 5px 5px 10px;
+  justify-self: flex-end;
+  margin-top: 20px;
+  gap: 3px;
+}
+.imagebox .btn {
+  font-size: 1rem;
+}
+.imagebox .btn-container svg {
+  font-size: 1.5rem;
+}
+
+
