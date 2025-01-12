@@ -65,6 +65,110 @@ body {
   outline: none;
 }
 
+/** ====== CAROUSEL COMPONENT ======= **/
+.carousel {
+  position: relative;
+  width: 80%;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 0px;
+}
+.carousel .content {
+  width: 320px;
+  right: 5.5%;
+  bottom: 23px;
+  border-radius: 15px;
+}
+.carousel .spanheader {
+  color: white;
+  border: 2px solid white;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 40px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  height: 100%;
+}
+.contentbox {
+  width: 50%;
+  height: 100%;
+}
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  gap: 10px;
+}
+.content-2 p {
+  font-size: 1.2rem;
+  margin: 15px 10px;
+}
+/** Carousel Buttons **/
+.carousel-btn {
+  position: absolute;
+  bottom: 0%;
+  border: none;
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  z-index: 10;
+  background-color: transparent;
+}
+.prev-btn {
+  background-color: white;
+  right: 60px;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+.prev-btn:hover {
+  background-color: white;
+}
+.next-btn {
+  right: 10px;
+  background-color: var(--primary-color);
+  color: white;
+}
+.next-btn:hover {
+  background-color: var(--primary-color);
+}
+.container {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  position: relative;
+}
+.image-container-1 {
+  height: 100%;
+  width: 50%;
+}
+.image-container-2 {
+  height: 70%;
+  width: 100%;
+}
+.carousel-item:first-child .image-container-1{
+  background-image: var(--img-overlay), url('assets/Static/rider1.jpg');
+}
+.carousel-item:first-child .image-container-2{
+  background-image: var(--img-overlay), url('assets/Static/fried-chicken.jpg');
+}
+
+.carousel-item:nth-child(2) .image-container-1{
+  background-image: var(--img-overlay), url('assets/Static/Drinks.jpg');
+}
+.carousel-item:nth-child(2) .image-container-2{
+  background-image: var(--img-overlay), url('assets/Static/checkout.jpg');
+}
+.carousel-item:last-child .image-container-1{
+  background-image: var(--img-overlay), url('assets/Static/fried-rice.jpg');
+}
+.carousel-item:last-child .image-container-2{
+  background-image: var(--img-overlay), url('assets/Static/BurgersFries.jpg');
+}
+
 /** ======= NAVBAR COMPONENT ======== **/
 .navbar-container {
   display: flex;
@@ -97,7 +201,6 @@ body {
 }
 .navlinks:hover a {
   color: white;
-
 }
 .logo {
   height: 50px;
@@ -116,7 +219,7 @@ body {
 }
 .hero-textbox::before {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   height: 100px;
   width: 100px;
@@ -128,7 +231,7 @@ body {
 }
 .hero-textbox::after {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   height: 200px;
   width: 200px;
@@ -151,6 +254,10 @@ body {
 .hero-textbox p {
   font-size: 1.2rem;
 }
+.hero-textbox h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
 .imagebox {
   background-image: var(--img-overlay), url("assets/Static/heroimg.jpg");
   background-position: center;
@@ -161,7 +268,7 @@ body {
   border-radius: 20px;
   position: relative;
 }
-.imagebox .content {
+.content {
   background-color: rgba(255, 255, 255, 0.214);
   backdrop-filter: blur(2px);
   color: white;
@@ -174,10 +281,11 @@ body {
   right: 15px;
   padding: 10px;
 }
-.imagebox .text h3, .text p {
+.text h3,
+.text p {
   margin: 5px 0;
 }
-.imagebox .btn-container{
+.imagebox .btn-container {
   padding: 5px 5px 5px 10px;
   justify-self: flex-end;
   margin-top: 20px;
@@ -190,4 +298,50 @@ body {
   font-size: 1.5rem;
 }
 
+/** ABOUT  US SECTION **/
+.about-us {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 600px;
+  gap: 40px;
+}
+.about-us .textbox {
+  width: 40%;
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.textbox::before {
+  content: "";
+  display: block;
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  background: var(--primary-color);
+  z-index: -1;
+  border-radius: 50%;
+  top: 30px;
+  left: -70px;
+  opacity: 0.2;
+}
+.spanheader {
+  font-size: 1.3rem;
+  border: 1px solid black;
+  border-radius: 50px;
+  width: fit-content;
+  padding: 5px 15px;
+}
+.textbox .text h1 {
+  font-size: 2.5rem;
+  margin: 10px 0;
+}
+.textbox .text p {
+  font-size: 1.2em;
+}
+.text span {
+  color: var(--primary-color);
+}
 

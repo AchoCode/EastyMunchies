@@ -1,7 +1,11 @@
 import React from "react";
 import { Button } from "../utilities/Button";
-
+import { Slider } from "../utilities/Slider";
+import img1 from "../../assets/Static/bg2.jpg";
+import img2 from "../../assets/Static/Drinks.jpg";
+import img3 from "../../assets/Static/fastfood.jpg";
 export const HomePg = () => {
+  const images = [img1, img2, img3];
   return (
     <div className="page-container">
       <section className="hero-section">
@@ -41,7 +45,21 @@ export const HomePg = () => {
       </section>
 
       <section className="about-us">
-
+        <div className="textbox">
+          <span className="spanheader">About us</span>
+          <div className="text">
+            <h1>
+              Elevate Your Dining Experience With <span>EpicEats</span>
+            </h1>
+            <p>
+              Indulge in a world of flavors tailored to your cravings, ensuring
+              that every meal is just a few taps aways with our convenient food
+              delivery app
+            </p>
+          </div>
+          <Button title="Dive Into Our Menu" link="/menu" />
+        </div>
+        <Slider />
       </section>
     </div>
   );
